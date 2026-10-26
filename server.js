@@ -47,7 +47,7 @@ async function processQueue() {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          phone: phone,
+          phone_number: phone,  // Fixed: using 'phone_number' as requested by UpesiPay API
           amount: Number(amount),
           reference: reference || `REF-${Date.now()}`,
           description: description || 'Wallet Top-up'
